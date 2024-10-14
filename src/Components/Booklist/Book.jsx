@@ -29,7 +29,7 @@ const Book = ({ imageSrc, title, author }) => {
   const Author = () => <h4>{author}</h4>;
 
   return (
-    <article>
+    <article className="book">
       <Image />
       <Title />
       <Author />
