@@ -1,20 +1,33 @@
-import React from "react"
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-function Greeting() {
+function BookList() {
     return (
-        <div>
-            <Person />
-            <Message />
-        </div>
+        <section>
+            <Book />
+            <Book />
+            <Book />
+            <Book />
+        </section>
     );
 }
 
-const Person = () => <h2>max</h2>;
-const Message = () => {
-    return <p>this is my message</p>;
+const Book = () => {
+    return (
+        <article>
+            <Image />
+            <Title />
+            <Author />
+        </article>
+    );
 };
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const Image = () => <h2>image placeholder</h2>;
+const Title = () => {
+    return <h2>Book Title</h2>;
+};
+const Author = () => <h4>Author</h4>;
 
-root.render(<Greeting />)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<BookList />);
