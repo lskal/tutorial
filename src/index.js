@@ -1,33 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Booklist from "./Components/Booklist/Booklist";
 
-function BookList() {
-    return (
-        <section>
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-        </section>
-    );
-}
-
-const Book = () => {
-    return (
-        <article>
-            <Image />
-            <Title />
-            <Author />
-        </article>
-    );
-};
-
-const Image = () => <h2>image placeholder</h2>;
-const Title = () => {
-    return <h2>Book Title</h2>;
-};
-const Author = () => <h4>Author</h4>;
+function Main() { return <Booklist /> }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<BookList />);
+root.render(<Main />);
