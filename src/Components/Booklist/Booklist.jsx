@@ -5,17 +5,16 @@ import "../../Styles/index.css";
 
 const Booklist = () => {
   return (
-    <>
+    <section className="booklist">
       {bestSellers.map((book, index) => (
-        <section className="booklist" key={index}>
-          <Book
-            imageSrc={book.imgSrc}
-            title={book.title}
-            author={book.author}
-          />
-        </section>
+        <Book
+          imageSrc={book.imgSrc}
+          title={book.title}
+          author={book.author}
+          key={index}
+        />
       ))}
-    </>
+    </section>
   );
 };
 

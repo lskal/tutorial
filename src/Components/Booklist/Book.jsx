@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 export const bestSellers = [
   {
@@ -26,13 +27,24 @@ const Book = ({ imageSrc, title, author }) => {
   const Title = () => {
     return <h2>{title}</h2>;
   };
-  const Author = () => <h4>{author}</h4>;
+  // INLINE css Author Component
+  /*  const Author = () => (
+    <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.5rem" }}>
+      {author}
+    </h4>
+  ); */
+  // STYLED CSS Author Component
+  const Author = styled.h4`
+    color: "#617d98";
+    font-size: "0.75rem";
+    margin-top: "0.5rem";
+  `;
 
   return (
     <article className="book">
       <Image />
       <Title />
-      <Author />
+      <Author>{author}</Author>
     </article>
   );
 };
